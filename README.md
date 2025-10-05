@@ -1,7 +1,7 @@
 # Deploying a Flask App on GCP
 - Name: Blanca Chimborazo-Reyes
 - Cloud Provider: GCP
-- Link to Video: (https://drive.google.com/file/d/1hh_DLmdJ-Ptm-wDhAnMf2eFoOW2G2DOY/view?usp=sharing)
+- Link to Video: https://drive.google.com/file/d/1hh_DLmdJ-Ptm-wDhAnMf2eFoOW2G2DOY/view?usp=sharing
 - Used Microsoft ClipChamp to trim video
 
 # Instructions
@@ -30,7 +30,7 @@
     - Description: include a short description
     - Targets: all instances in the network
     - Source IPv4 ranges: 0.0.0.0/0
-    - Check TCP
+    - Check TCP box
     - Ports: 5003
     - Click "Create"
 
@@ -70,16 +70,17 @@
 
 
 # Public Access Verification
-- Locate your VM's external ID address
-- Open a web browser and navigate to: http://<External_IP>:5003
-- The Flask app should load successfully
+- Locate your VM's external IP address and click on it
+- Clicking on it will open a new broswer tab that won't generate/load a page like seen below
+- To fix this, add http:// to the start of the IP and add :5003 at the end (http://<External_IP>:5003)
+- The Flask app should load successfully like seen in the second image below
 - Public URL: http://34.42.13.78:5003
 
 ![adding_port_to_IP](images/pic8.png)
 ![Deployed_flaskapp](images/pic9.png)
 
 # Stopping Flask
-- In the SSH terminal, press CTRL + C to stop the Flask application. Page should no longer load after refreshing
+- In the SSH terminal, press CTRL + C to stop the Flask application. Page should no longer load after refreshing.
 - Stop or delete your VM
 
 
