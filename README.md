@@ -1,8 +1,8 @@
 # Deploying a Flask App on GCP
 - Name: Blanca Chimborazo-Reyes
 - Cloud Provider: GCP
-- Link to Video: [screen_recording](https://drive.google.com/file/d/1hh_DLmdJ-Ptm-wDhAnMf2eFoOW2G2DOY/view?usp=sharing)
-Used Microsoft ClipChamp to trim video
+- Link to Video: (https://drive.google.com/file/d/1hh_DLmdJ-Ptm-wDhAnMf2eFoOW2G2DOY/view?usp=sharing)
+- Used Microsoft ClipChamp to trim video
 
 # Instructions
 ## Create GitHub Repo
@@ -13,32 +13,32 @@ Used Microsoft ClipChamp to trim video
 ## VM Creation
 - Navigate to Google Cloud Platform -> Compute Engine -> VM instances -> Click "Create Instance"
 - Configure the following settings:
-        - Name: select a name
-        - Region: Choose any region
-        - Series: E2
-        - Machine Type: e2-micro
-        - OS and Storage: Change the operating system to Ubuntu
-        - Networking: Allow HTTP and HTTPS traffic
-- Click "Create"
+    - Name: select a name
+    - Region: Choose any region
+    - Series: E2
+    - Machine Type: e2-micro
+    - OS and Storage: Change the operating system to Ubuntu
+    - Networking: Allow HTTP and HTTPS traffic
+    - Click "Create"
 
 ![VM_created](images/pic1.png)
 
 ## Firewall Configuration:
 - After your VM is created, navigate to VPC Network -> Firewall -> Click "Create Firewall Rule"
 - Configure the following settings:
-        - Name: select a name
-        - Description: include a short description
-        - Targets: all instances in the network
-        - Source IPv4 ranges: 0.0.0.0/0
-        - Check TCP
-        - Ports: 5003
-        - Click "Create"
+    - Name: select a name
+    - Description: include a short description
+    - Targets: all instances in the network
+    - Source IPv4 ranges: 0.0.0.0/0
+    - Check TCP
+    - Ports: 5003
+    - Click "Create"
 
 ![FW_config1](images/pic2.png) ![FW_config2](images/pic3.png)
 ![Fw-created](images/pic4.png)
 
 ## SSH Setup
-- Click on the SSH button next to your VM. This will open an SSH terminal and authorize access
+- Click the SSH button next to your VM. This will open an SSH terminal and authorize access
 - Enter the following commands
 
 ```
@@ -51,7 +51,7 @@ Used Microsoft ClipChamp to trim video
 # List files to verify
     ls -l
 # Navigate into the project directory
-    cd cloud_vm_networking_flask/
+    cd cloud_vm_networking_flask/ (enter your repos name)
 # Confirm files
     ls -l
 # Create a Python virtual environment
